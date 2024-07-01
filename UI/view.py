@@ -29,6 +29,7 @@ class View(ft.UserControl):
                       alignment=ft.MainAxisAlignment.CENTER)
         self._page.add(row1)
 
+
         #row 2
         self.ddMese = ft.Dropdown(label="Mese")
         self.btnConnessioneMax = ft.ElevatedButton(text="Connessione max", on_click=self._controller.handleConnessioneMax)
@@ -36,13 +37,14 @@ class View(ft.UserControl):
                        ft.Container(self.btnConnessioneMax, width=300)],
                       alignment=ft.MainAxisAlignment.CENTER)
         self._page.add(row2)
+        self._controller.fillDD()
 
         #row3
         self.ddM1 = ft.Dropdown(label="M1")
         self.ddM2 = ft.Dropdown(label="M2")
         self.btnCollegamento = ft.ElevatedButton(text="Collegamento", on_click=self._controller.handleCollegamento)
-        row3 = ft.Row([ft.Container(self.ddM1, width=300),
-                       ft.Container(self.ddM2, width=300),
+        row3 = ft.Row([ft.Container(self.ddM1, width=400),
+                       ft.Container(self.ddM2, width=400),
                        ft.Container(self.btnCollegamento, width=300)], alignment=ft.MainAxisAlignment.CENTER)
         self._page.add(row3)
 
